@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: secret
+
+# 비공개 설정을 secret 프로파일로 분리
+spring:
+  config:
+    import: classpath:application-secret.yml
+
+bitget:
+  baseUrl: https://api.bitget.com
+  tickerPath: /api/mix/v1/market/ticker
